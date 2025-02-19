@@ -145,12 +145,12 @@
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach var="item" items="${list}" varStatus="Count">
+										<c:forEach var="item" items="${roles}" varStatus="Count">
 											<tr>
 												<td>${Count.count}</td>
 												<td>${item.name}</td>
 												<td>${item.description}</td>
-												<td><a href="<c:url value ='/role-edit'/>?id_role=${item.id}" class="btn btn-sm btn-primary">Sửa</a>
+												<td><a href="<c:url value ='/role-update'/>?id_role=${item.id}" class="btn btn-sm btn-primary">Sửa</a>
 													<a href="#" class="btn btn-sm btn-danger btn-xoa"
 													id-role="${item.id}">Xóa</a></td>
 											</tr>

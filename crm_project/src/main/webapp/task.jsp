@@ -149,7 +149,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach var="items" items="${listJob}" varStatus="Count">
+										<c:forEach var="items" items="${jobs}" varStatus="Count">
 											<tr>
 												<td>${Count.count}</td>
 												<td>${items.jobName}</td>
@@ -158,7 +158,7 @@
 												<td>${items.startDate}</td>
 												<td>${items.endDate}</td>
 												<td>${items.status.name}</td>
-												<td><a href="<c:url value='/task-edit'/>?id_job=${items.id}" class="btn btn-sm btn-primary">Sửa</a>
+												<td><a href="<c:url value='/task-update'/>?id_job=${items.id}" class="btn btn-sm btn-primary">Sửa</a>
 													<a href="#" class="btn btn-sm btn-danger btn-xoa"
 													id-job="${items.id}">Xóa</a> <a
 													href="#" class="btn btn-sm btn-info">Xem</a></td>

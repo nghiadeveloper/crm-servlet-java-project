@@ -139,17 +139,17 @@
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach var="items" items="${listProject}"
+										<c:forEach var="items" items="${jobs}"
 											varStatus="Count">
 											<tr>
 												<td>${Count.count}</td>
 												<td>${items.name}</td>
 												<td>${items.startDate}</td>
 												<td>${items.endDate}</td>
-												<td><a href="<c:url value='/groupwork-edit'/>?id_project=${items.id}" class="btn btn-sm btn-primary">Sửa</a>
+												<td><a href="<c:url value='/groupwork-update'/>?id_project=${items.id}" class="btn btn-sm btn-primary">Sửa</a>
 													<a href="#" class="btn btn-sm btn-danger btn-xoa"
 													id-project="${items.id}">Xóa</a> <a
-													href="groupwork-details.html" class="btn btn-sm btn-info">Xem</a>
+													href="groupwork.jsp" class="btn btn-sm btn-info">Xem</a>
 												</td>
 											</tr>
 										</c:forEach>

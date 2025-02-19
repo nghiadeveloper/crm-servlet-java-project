@@ -146,16 +146,16 @@
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach var="items" items="${listUser}" varStatus="Count">
+										<c:forEach var="items" items="${users}" varStatus="Count">
 											<tr>
 												<td>${Count.count}</td>
 												<td>${items.firstName}</td>
 												<td>${items.lastName}</td>
 												<td>${items.fullName}</td>
 												<td>${items.role_id.name}</td>
-												<td><a href="<c:url value ='/user-edit'/>?id_user=${items.id}" class="btn btn-sm btn-primary">Sửa</a>
+												<td><a href="<c:url value ='/user-update'/>?id_user=${items.id}" class="btn btn-sm btn-primary">Sửa</a>
 													<a href="#" class="btn btn-sm btn-danger btn-xoa"
-													id-user="${items.id}">Xóa</a> <a href="user-details.html"
+													id-user="${items.id}">Xóa</a> <a href="user-table.jsp"
 													class="btn btn-sm btn-info">Xem</a></td>
 											</tr>
 										</c:forEach>

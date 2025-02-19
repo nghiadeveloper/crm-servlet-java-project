@@ -128,16 +128,13 @@
 					<div class="col-md-2 col-12"></div>
 					<div class="col-md-8 col-xs-12">
 						<div class="white-box">
-							<form action="<c:url value='/role-add'/>" method="post"
+							<form action="role-add" method="post"
 								class="form-horizontal form-material">
 								<div class="form-group">
 									<label class="col-md-12">Tên quyền</label>
 									<div class="col-md-12">
 										<input type="text" placeholder="Tên quyền"
 											class="form-control form-control-line" name="role-name" />
-										<c:if test="${not empty errorRoleName }">
-											<span style="color: red">${errorRoleName}</span>
-										</c:if>
 									</div>
 								</div>
 								<div class="form-group">
@@ -145,31 +142,15 @@
 									<div class="col-md-12">
 										<input type="text" placeholder="Mô tả"
 											class="form-control form-control-line" name="desc" />
-										<c:if test="${not empty errorDesc }">
-											<span style="color: red">${errorDesc}</span>
-										</c:if>
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-sm-12">
-										<button type="submit" class="btn btn-success">Add
-											Role</button>
+										<button type="submit" class="btn btn-success">Add Role</button>
 										<a href="<c:url value='/role' />" class="btn btn-primary">Quay lại</a>
 									</div>
 								</div>
 							</form>
-							<c:if test="${not empty error }">
-								<span">${error}</span>
-								</br>
-							</c:if>
-							<c:if test="${not empty isSuccess}">
-								<c:if test="${isSuccess}">
-		                    	Thêm thành công 
-		                    </c:if>
-								<c:if test="${!isSuccess}">
-		                    	Thêm không thành công 
-		                    </c:if>
-							</c:if>
 						</div>
 					</div>
 					<div class="col-md-2 col-12"></div>
